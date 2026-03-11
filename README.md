@@ -11,7 +11,6 @@ A ideia é registrar minha evolução na linguagem Java e revisar conceitos impo
 * Resolver exercícios propostos no curso
 * Criar o hábito de estudar e programar todos os dias
 
-Este repositório faz parte do meu desafio pessoal de 100 dias de estudo e código.
 
 ## 📚 Conteúdos estudados
 
