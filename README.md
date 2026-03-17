@@ -1,6 +1,6 @@
 # ☕ Curso Java Completo - Desafios
 
-Este repositório contém os exercícios e desafios que estou resolvendo durante o curso *Java Completo: 60 Exercícios, POO, JavaFX, JDBC, Postman, STS, REST, Maven, SQLite, JSON, Hibernate/JPA **, ministrado pelo professor **Arnaldo Sousa**.
+Este repositório contém os exercícios e desafios que estou resolvendo durante o curso **Java Completo: 60 Exercícios, POO, JavaFX, JDBC, Postman, STS, REST, Maven, SQLite, JSON, Hibernate/JPA **, ministrado pelo professor **Arnaldo Sousa**.
 
 A ideia é registrar minha evolução na linguagem Java e revisar conceitos importantes de programação.
 
