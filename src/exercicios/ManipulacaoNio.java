@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 public class ManipulacaoNio {
     public static void main(String[] args) {
         String nomeArquivo = "meuarquivo.txt";
-        String conteudo = "Olá, mundo!";
+        String conteudo = "Olá, mundo!! ";
         // Escrevendo no arquivo
         escreverNoArquivo(nomeArquivo, conteudo);
         // Lendo do arquivo

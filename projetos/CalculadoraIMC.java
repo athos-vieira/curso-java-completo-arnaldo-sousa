@@ -17,10 +17,10 @@ public class CalculadoraIMC {
         // inicia exceção caso alguma entrada não siga o tipo primitivo correspondente
         try {
 
-            System.out.print("Digite seu nome:");
+            System.out.print("Digite seu nome: ");
             nome = scanner.nextLine();
 
-            System.out.print("Digite sua idade:");
+            System.out.print("Digite sua idade: ");
             idade = scanner.nextInt();
 
             System.out.print("Digite sua altura (ex: 1,75): ");
