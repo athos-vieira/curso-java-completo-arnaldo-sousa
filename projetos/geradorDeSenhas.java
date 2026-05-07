@@ -14,11 +14,14 @@ public class geradorDeSenhas {
             StringBuilder senha = new StringBuilder();
 
             for (int  i = 0; i < comprimento; i++) {
+
+                //gera caracter aleatorio de acordo com algum indice da String final e adiciona esse caracter ao final da senha
                 int indice = geradorNumeroAleatorio.nextInt(CARACTERES.length());
                 senha.append(CARACTERES.charAt(indice));
 
             }
 
+            // converter StringBuilder em String para ficar de acordo com a assinatura do metodo
             return senha.toString();
 
         }
