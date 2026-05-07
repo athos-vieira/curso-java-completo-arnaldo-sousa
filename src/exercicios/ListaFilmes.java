@@ -20,7 +20,7 @@ public class ListaFilmes {
         if (filmes.contains(filmeBuscado)){
             System.out.println(filmeBuscado + " está na lista");
         } else {
-            System.out.println(filmeBuscado + " não está na lista");
+            System.out.println(filmeBuscado + " não está na lista!!");
         }
     }
 }
