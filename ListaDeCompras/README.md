@@ -13,7 +13,7 @@ Sistema de lista de compras desenvolvido em Java no terminal, com funcionalidade
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## git Tecnologias Utilizadas
 
 - Java
 - POO (Programação Orientada a Objetos)
