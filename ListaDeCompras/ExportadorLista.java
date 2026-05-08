@@ -1,5 +1,5 @@
 package ListaDeCompras;
 
-public class Exportador {
+public class ExportadorLista {
     
 }
