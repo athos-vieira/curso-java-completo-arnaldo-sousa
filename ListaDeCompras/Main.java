@@ -1,34 +1,37 @@
 package ListaDeCompras;
 
-import java.util.*;
 
+
+import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
 
         Scanner scanner = new Scanner(System.in);
 
-        ListaDeCompras lista = new ListaDeCompras();
+        ListaService listaService = new ListaService();
 
         int opcao;
 
-
-        // loop principal
-        // o menu aparece ate o usuario escolher a opcao de sair
-
         do {
 
-            System.out.println("\n-------ESCOLHA UMA OPÇÃO------- ");
-            System.out.println("1 - adicionar item ");
-            System.out.println("2 - listar itens ");
-            System.out.println("3 - exportar pedido ");
-            System.out.println("4 - sair ");
+            System.out.println("\n======= ESCOLHA UMA OPÇÃO =======");
+            System.out.println("1 - Adicionar item");
+            System.out.println("2 - Listar itens");
+            System.out.println("3 - Remover item");
+            System.out.println("4 - Exportar lista");
+            System.out.println("5 - Sair");
+
+            System.out.print("Digite uma opção: ");
 
 
             if (scanner.hasNextInt()) {
 
                 opcao = scanner.nextInt();
+
+                // consome o ENTER no buffer para evitar strings vazias
                 scanner.nextLine();
 
             } else {
@@ -37,59 +40,126 @@ public class Main {
 
                 scanner.nextLine();
 
+                // cai no default
                 opcao = 0;
             }
 
-
-            // decidir o que fazer com base na opçao escoliha
-
             switch (opcao) {
+
                 case 1:
 
-                    System.out.println("Digite o nome do item: ");
 
-                    String item = scanner.nextLine();
+                    String nome;
 
-                    lista.adicionarItem(item);
+                    while (true) {
 
+                        System.out.print("Nome: ");
+
+                        nome = scanner.nextLine();
+
+                        if (!nome.trim().isEmpty()) {
+
+                            break;
+                        }
+
+                        System.out.println("Digite um nome válido!");
+
+                    }
+
+
+                    double preco;
+
+                    while (true) {
+
+                        System.out.print("Preço: ");
+
+                        if (scanner.hasNextDouble()) {
+
+                            preco = scanner.nextDouble();
+
+                            scanner.nextLine();
+
+                            break;
+                        }
+
+                        System.out.println("Digite um preço válido!");
+
+                        scanner.nextLine();
+
+                    }
+
+
+                    int quantidade;
+
+                    while (true) {
+
+                        System.out.print("Quantidade: ");
+
+                        if (scanner.hasNextInt()) {
+
+                            quantidade = scanner.nextInt();
+
+                            scanner.nextLine();
+
+                            break;
+                        }
+
+                        System.out.println("Digite uma quantidade válida!");
+
+                        scanner.nextLine();
+
+                    }
+
+
+                    Item item = new Item(nome, preco, quantidade);
+
+
+                    listaService.adicionarItem(item);
 
                     break;
-
 
                 case 2:
 
-                    lista.listarItens();
+
+                    listaService.listarItens();
 
                     break;
-
 
                 case 3:
 
-                    ExportadorLista.exportar(lista.getItens());
+                    listaService.listarItens();
+
+                    System.out.print("Digite o número do item: ");
+
+                    int indice = scanner.nextInt();
+
+                    scanner.nextLine();
+
+                    listaService.removerItem(indice - 1);
 
                     break;
-
 
                 case 4:
 
-                    System.out.println("encerrando sistema");
+                    ArquivoService.exportar(listaService.getItens());
 
                     break;
 
+                case 5:
+
+                    System.out.println("Encerrando sistema...");
+
+                    break;
 
                 default:
 
-                    System.out.println("opção inválida");
-
+                    System.out.println("Opção inválida!");
 
             }
 
-        } while (opcao != 4);
+        } while (opcao != 5);
 
 
         scanner.close();
-
-
     }
-
 }
